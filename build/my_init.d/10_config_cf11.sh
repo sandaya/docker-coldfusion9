@@ -1,6 +1,6 @@
 #!/bin/sh
 
-config=/tmp/config/cf10.tar.gz
+config=/tmp/config/cf10-linux64.tar.gz
 target=/opt/coldfusion10
 
 if [ ! -f $config ]
