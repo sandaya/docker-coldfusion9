@@ -9,4 +9,4 @@ RUN apt-get install -y wget unzip xsltproc apache2
 ADD ./build/install/ /tmp/
 ADD ./build/service/ /etc/service/
 ADD ./build/my_init.d/ /etc/my_init.d/
-RUN /tmp/install-cf11.sh
+RUN /tmp/install-cf10.sh
