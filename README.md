@@ -14,3 +14,4 @@ There are some open source competitors to Adobe ColdFusion server such as Railo 
 1. The admin password for the coldfusion server is `Adm1n$`
 2. You can't access the cf-admin interface from the web. You need to use the CF Admin API
 3. You can learn more about the coldfusion installation by looking in `./build/install/installer.profile`
+4. If you want to build your own container instead of using this one check out [these instructions](https://github.com/finalcut/docker-coldfusion10/blob/master/BUILD_INSTRUCTIONS.md)
