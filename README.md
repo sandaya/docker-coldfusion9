@@ -16,3 +16,5 @@ And run it with:
 
 
 This is entirely based on the work found at https://github.com/naag/docker-coldfusion11
+
+The silent installation of ColdFusion is accomplished with a ./build/install/installer.profile file. The syntax for that file is described in this [Adobe blog post](: http://blogs.adobe.com/cfdoc/2009/10/performing_a_silent_installation_of_coldfusion_9.html).
