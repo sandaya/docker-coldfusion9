@@ -1,11 +1,13 @@
 docker-coldfusion10
 ===================
 
-ColdFusion 11 as Docker image on Ubuntu 14.04. Run
+ColdFusion 10 as Docker image on Ubuntu 14.04.
+
+If you are on a VM or something and you need to download the coldfusion binary and patch files from a local file server update prepare.sh and then run it.
 
     ./prepare.sh
 
-first to download ColdFusion 10 installer and latest patches. Then build the Docker container:
+Once you have the CF binary and patches in the /install/build direcotry you can build the Docker container:
 
     docker build -t cf10 .
 
