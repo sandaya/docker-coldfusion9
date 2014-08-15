@@ -13,15 +13,17 @@
 # Simulate a browser request on the admin UI to complete installation
 wget --delete-after http://localhost:8500/CFIDE/administrator/index.cfm?configServer=true
 
-#apply mandatory hotfix
-
-#apply hotfix 13
-
 # Stop the CF server instance
 /opt/coldfusion10/cfusion/bin/coldfusion stop
 
 # Re-enable admin security
 /tmp/neo-security-config.sh /opt/coldfusion10/cfusion true
+
+#apply mandatory hotfix
+java -jar /tmp/cf10_mdt_updt.jar -i silent
+
+#apply hotfix 13
+java -jar hotfix_013.jar -i silent
 
 # Configure Apache2 to run in front of Tomcat
 /opt/coldfusion10/cfusion/runtime/bin/wsconfig -ws Apache -dir /etc/apache2/ -bin /usr/sbin/apache2 -script /etc/init.d/apache2
