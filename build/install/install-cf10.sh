@@ -13,6 +13,10 @@
 # Simulate a browser request on the admin UI to complete installation
 wget --delete-after http://localhost:8500/CFIDE/administrator/index.cfm?configServer=true
 
+#apply mandatory hotfix
+
+#apply hotfix 13
+
 # Stop the CF server instance
 /opt/coldfusion10/cfusion/bin/coldfusion stop
 
