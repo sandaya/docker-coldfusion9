@@ -11,7 +11,7 @@ first to download ColdFusion 10 installer and latest patches. Then build the Doc
 
 And run it with:
 
-    docker run -d -p 80:80 -v /var/www:/var/www cf10
+    docker run -d -p 8880:80 -v /var/www:/var/www cf10
 
 
 

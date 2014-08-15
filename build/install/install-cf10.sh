@@ -23,7 +23,7 @@ wget --delete-after http://localhost:8500/CFIDE/administrator/index.cfm?configSe
 java -jar /tmp/cf10_mdt_updt.jar -i silent
 
 #apply hotfix 13
-java -jar hotfix_013.jar -i silent
+java -jar /tmp/hotfix_013.jar -i silent
 
 # Configure Apache2 to run in front of Tomcat
 /opt/coldfusion10/cfusion/runtime/bin/wsconfig -ws Apache -dir /etc/apache2/ -bin /usr/sbin/apache2 -script /etc/init.d/apache2
