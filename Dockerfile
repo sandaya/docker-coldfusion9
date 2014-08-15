@@ -6,7 +6,6 @@ VOLUME ["/var/www", "/tmp/config"]
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 RUN apt-get install -y wget unzip xsltproc apache2 default-jre
-ENV JAVA_HOME
 ADD ./build/install/ /tmp/
 ADD ./build/service/ /etc/service/
 RUN chmod -R 755 /etc/service/coldfusion10
