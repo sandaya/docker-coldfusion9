@@ -1,5 +1,5 @@
 FROM phusion/baseimage:0.9.9
-MAINTAINER pressrelations
+MAINTAINER finalcut
 EXPOSE 80 8500
 VOLUME ["/var/www", "/tmp/config"]
 
