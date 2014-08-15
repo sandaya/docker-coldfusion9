@@ -1,3 +1,5 @@
+ENV REFRESHED_AT 2014_08_15
+
 FROM phusion/baseimage:0.9.9
 MAINTAINER finalcut
 EXPOSE 80 8500
