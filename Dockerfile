@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV REFRESHED_AT 2014_08_15
 
 RUN apt-get update
-RUN apt-get install -y wget unzip xsltproc apache2 default-jre
+RUN apt-get install -y wget unzip xsltproc apache2 default-jre && apt-get clean
 
 ADD ./build/install/ /tmp/
 ADD ./build/service/ /etc/service/
