@@ -1,10 +1,10 @@
 FROM phusion/baseimage:0.9.9
-MAINTAINER finalcut
+MAINTAINER finalcut bill@rawlinson.us
 EXPOSE 80 8500
 VOLUME ["/var/www", "/tmp/config"]
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV REFRESHED_AT 2014_08_15
+ENV REFRESHED_AT 2014_08_21_1
 
 RUN apt-get update
 RUN apt-get install -y wget unzip xsltproc apache2 default-jre && apt-get clean
