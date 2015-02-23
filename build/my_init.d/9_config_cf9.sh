@@ -1,7 +1,7 @@
 #!/bin/sh
 
-config=/tmp/config/cf10-linux64.tar.gz
-target=/opt/coldfusion10
+config=/tmp/config/cf9-linux64.tar.gz
+target=/opt/coldfusion9
 
 if [ ! -f $config ]
 then

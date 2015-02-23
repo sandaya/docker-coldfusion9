@@ -17,11 +17,11 @@ If you are on a VM or something and you need to download the coldfusion binary a
 
 Once you have the CF binary and patches in the /install/build direcotry you can build the Docker container:
 
-    docker build -t cf10 .
+    docker build -t cf9 .
 
 And run it with:
 
-    docker run -d -p 8880:80 -v /var/www:/var/www cf10
+    docker run -d -p 8880:80 -v /var/www:/var/www cf9
 
 
 # Credits
@@ -39,5 +39,5 @@ The CF installation script was written by Jan Ruusuvuori and seems to only exist
 1. The admin password for the coldfusion server is `Adm1n$`
 2. You can't access the cf-admin interface from the web. You need to use the CF Admin API
 3. You can learn more about the coldfusion installation by looking in `./build/install/installer.profile`
-4. If you want to build your own container instead of using this one check out [these instructions](https://github.com/finalcut/docker-coldfusion10/blob/master/BUILD_INSTRUCTIONS.md)
+4. If you want to build your own container instead of using this one check out [these instructions](https://github.com/finalcut/docker-coldfusion9/blob/master/BUILD_INSTRUCTIONS.md)
 5. Finally, I map port 80 on the CF server to port 8880 and I have it in the usage instructions here to make it easier for me to copy paste.  Use whatever port mapping works for you.
