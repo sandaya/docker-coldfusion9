@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+/opt/coldfusion9/solr/cfsolr stop 2>&1
+
+running=1
+
+while [ $running = "1" ]
+do
+    # Insane check to see if CF is running...
+	status="$(netstat -an|grep 8983|grep LISTEN)"
+	if [ "$status" == "" ]
+	then
+		running=0
+		break
+	fi
+
+	sleep 2
+done
+
+exit 1

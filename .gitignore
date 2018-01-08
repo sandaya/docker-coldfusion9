@@ -1,2 +1,3 @@
+build/install/updates/*
 build/install/*.jar
 build/install/ColdFusion_*_WWEJ_linux64.bin

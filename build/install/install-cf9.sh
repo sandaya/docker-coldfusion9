@@ -19,6 +19,14 @@ wget -O /dev/null http://localhost:8500/CFIDE/administrator/index.cfm?configServ
 # Re-enable admin security
 /tmp/neo-security-config.sh /opt/coldfusion9 true
 
+# updates...
+java -jar /tmp/updates/CF902/lib/updates/chf9020001.jar
+rm -f /opt/coldfusion9/lib/updates/hf902-00001.jar
+rm -f /opt/coldfusion9/lib/updates/hf902-00002.jar
+rm -f /opt/coldfusion9/lib/updates/hf902-00003.jar
+cp -f /tmp/updates/CF902/lib/*.jar /opt/coldfusion9/lib/
+mv -f /tmp/updates/CFIDE /opt/coldfusion9/CFIDE
+
 # Start up the CF server instance and wait for a moment
 /opt/coldfusion9/bin/coldfusion start; sleep 15
 

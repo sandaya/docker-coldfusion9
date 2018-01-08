@@ -11,7 +11,7 @@ SILENT_INSTALL_SAMPLES=false
 #SILENT_INSTALL_JNBRIDGE=false
 
 SILENT_INSTALL_ADMIN=true
-SILENT_INSTALL_SOLR=false
+SILENT_INSTALL_SOLR=true
 SILENT_INSTALL_FOLDER=/opt/coldfusion9
 
 #only unix systems can use this.. it starts CF automatically when system boots
