@@ -30,5 +30,27 @@ mv -f /tmp/updates/CFIDE /opt/coldfusion9/CFIDE
 # Start up the CF server instance and wait for a moment
 /opt/coldfusion9/bin/coldfusion start; sleep 15
 
+
+# Apache2 settings
+echo "ServerTokens Prod" >> /etc/apache2/conf.d/security
+echo "ServerSignature Off" >> /etc/apache2/conf.d/security
+echo "TraceEnable Off" >> /etc/apache2/conf.d/security
+cat <<EOF >>/etc/apache2/sites-available/cf9
+<VirtualHost *:80>    
+    ServerAdmin cmecfhelpdesk@mieb.uscourts.gov
+    DocumentRoot /var/www
+    <Directory /var/www>
+        Options -Indexes +FollowSymLinks
+        AllowOverride None
+        DirectoryIndex index.cfm index.htm index.html
+    </Directory>
+    LogLevel info
+    ErrorLog ${APACHE_LOG_DIR}/error.log    
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+EOF
+rm -f /etc/apache2/sites-enabled/000-default
+ln -sf /etc/apache2/sites-available/cf9 /etc/apache2/sites-enabled/cf9
+
 # Configure Apache2 to run in front of Tomcat
 /opt/coldfusion9/runtime/bin/wsconfig -server coldfusion -coldfusion -ws Apache -dir /etc/apache2/ -bin /usr/sbin/apache2 -script /etc/init.d/apache2 -v
